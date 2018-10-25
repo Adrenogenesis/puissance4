@@ -1,0 +1,48 @@
+ img {
+    max-width: 100%;
+    }
+
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-container > div {
+    width: 600px;
+    margin: 0;
+    text-align: center;
+    background-color: rgb(175, 175, 175);
+    border-radius: 5%;
+  }
+
+  button {
+
+    width: 80px;
+    height: 80px;
+background-color: rgb(2, 175, 255);
+border-radius: 50%;
+
+  } 
+
+  #plateforme table td {
+    width:80px;
+    height:80px;
+    border-style:solid;
+    border-color:blue;
+    border-radius: 100px;
+    background-color:white;
+
+}
+#plateforme table{
+    background-color:blue;
+}
+
+#plateforme .joueur2{
+    background-color:yellow;
+}
+#plateforme .joueur1{
+    background-color:red;
+}
