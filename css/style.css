@@ -1,9 +1,22 @@
- img {
+body {
+    background-color: black;
+}
+
+ h1{
+     color: #FFFF;
+ }
+
+ a:hover { 
+    background-color: rgb(132, 140, 255);
+}
+
+img {
     max-width: 100%;
     }
 
 
 .flex-container {
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,37 +25,31 @@
 
   .flex-container > div {
     width: 600px;
-    margin: 0;
+    margin: 5px;
     text-align: center;
-    background-color: rgb(175, 175, 175);
+    background-color: rgb(208, 230, 236);
     border-radius: 5%;
-  }
+   }
 
   button {
 
     width: 80px;
     height: 80px;
-background-color: rgb(2, 175, 255);
+    display: inline-block;
+background-color: rgb(168, 174, 255);
 border-radius: 50%;
+border-color: red;
+transition-duration: 0.4s;
+    cursor: pointer;
+    color: transparent;
 
   } 
 
-  #plateforme table td {
-    width:80px;
-    height:80px;
-    border-style:solid;
-    border-color:blue;
-    border-radius: 100px;
-    background-color:white;
-
-}
-#plateforme table{
-    background-color:blue;
+  button:hover {
+    background-color: rgb(120, 166, 250); /* Green */
+    color: white;
 }
 
-#plateforme .joueur2{
-    background-color:yellow;
-}
-#plateforme .joueur1{
-    background-color:red;
+td {
+    position: static;
 }
