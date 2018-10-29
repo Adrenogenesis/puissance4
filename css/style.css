@@ -16,7 +16,6 @@ img {
 
 
 .flex-container {
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,7 +37,7 @@ img {
     display: inline-block;
 background-color: rgb(168, 174, 255);
 border-radius: 50%;
-border-color: red;
+border-color: black;
 transition-duration: 0.4s;
     cursor: pointer;
     color: transparent;
@@ -48,8 +47,4 @@ transition-duration: 0.4s;
   button:hover {
     background-color: rgb(120, 166, 250); /* Green */
     color: white;
-}
-
-td {
-    position: static;
 }

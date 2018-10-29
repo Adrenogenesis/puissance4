@@ -2,24 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    
-    <title>Puissance 4</title>
+    <title>Morpion</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
-        <div class="flex-container">
-                <h1>puissance4</h1>
-         
-  <div id="jeu">
-    
+<div class="flex-container">
+    <h1>Morpion</h1>
+<div id="game-area">
+
+    <button id="x1-y1" class="tab" onClick="changeColor(this.id)">1-1</button>
+    <button id="x1-y2" class="tab" onClick="changeColor(this.id)">1-2</button>
+    <button id="x1-y3" class="tab" onClick="changeColor(this.id)">1-3</button><br>
+    <button id="x2-y1" class="tab" onClick="changeColor(this.id)">2-1</button>
+    <button id="x2-y2" class="tab" onClick="changeColor(this.id)">2-2</button>
+    <button id="x2-y3" class="tab" onClick="changeColor(this.id)">2-3</button><br>
+    <button id="x3-y1" class="tab" onClick="changeColor(this.id)">3-1</button>
+    <button id="x3-y2" class="tab" onClick="changeColor(this.id)">3-2</button>
+    <button id="x3-y3" class="tab" onClick="changeColor(this.id)">3-3</button>
+
+
 </div>
-      
-        
-            </div>
-        </div>
-            <script src="js/puissance4.js"></script>
-    </body>
+</div>
+<script>
+    const gameArea = document.getElementById("game-area"); // le seul élément du DOM dont on a besoin
+    // c'est l'élément parent de nos cases -> on récupérera l'enfant au clique.
+
+    const cellsStatus = [["vide", "vide", "vide"],
+                         ["vide", "vide", "vide"],
+                         ["vide", "vide", "vide"]];
+
+    gameArea.addEventListener("click", function(event) {
+        let clickedCellElm;
+        let clickedCellName;
+        let clickedCellChordX;
+        let clickedCellChordY;
+
+        clickedCellElm = document.getElementById(event.target.id); //enregistre l'élément  enfant du DOM qui a été cliquée.
+        clickedCellName = event.target.id; //renvoie l'id de la cellule cliquée sous forme de string
+        clickedCellChordX = parseInt(clickedCellName[1]); // récupère le 2eme caractère dans l'ID
+        clickedCellChordY = parseInt(clickedCellName[4]); // récupère le 4eme caractère dans l'ID
+        console.log("X : " + clickedCellChordX + ", Y : " + clickedCellChordY);
+        console.log("clickedCell : " + clickedCellName);
+
+        cellsStatus[clickedCellChordX-1][clickedCellChordY-1] = "clicked"; // modifie le tableau pour stocker la donnée dans la case cliquée
+
+        //console.log(cellsStatus);
+
+        clickedCellElm.innerHTML = "Clicked"; // change la case qui viens d'être cliquée (contrairement a ce que j'ai dis
+        // peut être fait aussi avec le clic MAIS n'oubliez pas de stocker l'information dans un tableau car
+        // il faudra utiliser le tableau pour vérifier les conditions de victoire
+
+    });
+
+    nom = prompt("donnez  le nom du 1er joueur", "")
+    nom2=prompt("donnez  le nom du 2eme joueur", "")
+
+         function changeColor(id) {
+             const tabs = document.getElementsByClassName('tab');
+
+             for (let i = 0; i < tabs.length; ++i) {
+                 const item = tabs[i];
+                 item.style.backgroundColor = (item.id === id) ? "red" : "white";
+             }
+
+         }
+
+         if (nom ="fred"){
+                  fred = 1;
+                 console.log("fred",fred);
+         }
+
+         if (nom = "autre"){
+                  autre = 2;
+                 console.log("autre",autre);
+          }
+         
+
+</script>
+</body>
 </html>
