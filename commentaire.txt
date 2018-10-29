@@ -1,0 +1,28 @@
+// Tableau
+
+joueur 1 clicked => red
+
+compteur de coup
+
+joueur 2 clicked => blue
+
+ joueur2  id != de joueur1
+
+ si joueur1 (x1-y1,x2-y1,x3-y1) clicked => gagné
+ si joueur1 (x1-y2,x1-y2,x1-y2) clicked => gagné
+ si joueur1 (x1-y3,x2-y3,x3-y3) clicked => gagné
+ si joueur1 (x1-y1,x1-y2,x1-y3) clicked => gagné
+ si joueur1 (x2-y1,x2-y2,x2-y3) clicked => gagné
+ si joueur1 (x3-y1,x3-y2,x3-y3) clicked => gagné
+ si joueur1 (x1-y1,x2-y2,x3-y3) clicked => gagné
+ si joueur1 (x3-y1,x2-y2,x1-y3) clicked => gagné
+
+
+ else
+
+
+ perdu
+
+
+
+
