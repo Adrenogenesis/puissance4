@@ -44,39 +44,55 @@
         console.log("X : " + clickedCellChordX + ", Y : " + clickedCellChordY);
         console.log("clickedCell : " + clickedCellName);
 
-        cellsStatus[clickedCellChordX-1][clickedCellChordY-1] = "clicked"; // modifie le tableau pour stocker la donnée dans la case cliquée
+        var joueur1 = 0;
+        var joueur2 = 1;
+        cellsStatus[clickedCellChordX-1][clickedCellChordY-1] = joueur1; // modifie le tableau pour stocker la donnée dans la case cliquée
 
         //console.log(cellsStatus);
 
-        clickedCellElm.innerHTML = "Clicked"; // change la case qui viens d'être cliquée (contrairement a ce que j'ai dis
+
+        clickedCellElm.innerHTML = "joueurEnCours"; // change la case qui viens d'être cliquée (contrairement a ce que j'ai dis
         // peut être fait aussi avec le clic MAIS n'oubliez pas de stocker l'information dans un tableau car
         // il faudra utiliser le tableau pour vérifier les conditions de victoire
 
+
+        if(joueur1 % 2 == 0){
+
+            console.log("joueur 1 joue");
+        }else {
+
+            console.log("joueur 2 joue");
+        }
+
+
     });
 
-    nom = prompt("donnez  le nom du 1er joueur", "")
-    nom2=prompt("donnez  le nom du 2eme joueur", "")
+    function changeColor(id) {
+        const tabs = document.getElementsByClassName('tab');
 
-         function changeColor(id) {
-             const tabs = document.getElementsByClassName('tab');
+        for (let i = 0; i < tabs.length; ++i) {
+            const item = tabs[i];
+            item.style.backgroundColor = (item.id === id) ? "red" : "white";
+        }
 
-             for (let i = 0; i < tabs.length; ++i) {
-                 const item = tabs[i];
-                 item.style.backgroundColor = (item.id === id) ? "red" : "white";
-             }
+    }
 
-         }
 
-         if (nom ="fred"){
-                  fred = 1;
-                 console.log("fred",fred);
-         }
 
-         if (nom = "autre"){
-                  autre = 2;
-                 console.log("autre",autre);
-          }
-         
+
+
+   // var joueur1 = 1;
+  //  function display_input(gameArea){
+   //    if ( joueur1 == 1 ){
+   //         document.getElementById("game-area").innerHTML = "X";
+    //        joueur1 = 0;
+    //    } else {
+    //        document.getElementById("game-area").innerHTML = "O";
+    //        joueur1 = 1;
+  //      }
+ //   }
+
+
 
 </script>
 </body>
