@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="flex-container">
-    <h1>Morpion</h1>
+    <h1>Morpion test puissance 4</h1>
 <div id="game-area">
 
     <button id="x1-y1" class="tab" onClick="changeColor(this.id)">1-1</button>
@@ -23,77 +23,6 @@
 
 </div>
 </div>
-<script>
-    const gameArea = document.getElementById("game-area"); // le seul élément du DOM dont on a besoin
-    // c'est l'élément parent de nos cases -> on récupérera l'enfant au clique.
-
-    const cellsStatus = [["vide", "vide", "vide"],
-                         ["vide", "vide", "vide"],
-                         ["vide", "vide", "vide"]];
-
-    gameArea.addEventListener("click", function(event) {
-        let clickedCellElm;
-        let clickedCellName;
-        let clickedCellChordX;
-        let clickedCellChordY;
-
-        clickedCellElm = document.getElementById(event.target.id); //enregistre l'élément  enfant du DOM qui a été cliquée.
-        clickedCellName = event.target.id; //renvoie l'id de la cellule cliquée sous forme de string
-        clickedCellChordX = parseInt(clickedCellName[1]); // récupère le 2eme caractère dans l'ID
-        clickedCellChordY = parseInt(clickedCellName[4]); // récupère le 4eme caractère dans l'ID
-        console.log("X : " + clickedCellChordX + ", Y : " + clickedCellChordY);
-        console.log("clickedCell : " + clickedCellName);
-
-        var joueur1 = 0;
-        var joueur2 = 1;
-        cellsStatus[clickedCellChordX-1][clickedCellChordY-1] = joueur1; // modifie le tableau pour stocker la donnée dans la case cliquée
-
-        //console.log(cellsStatus);
-
-
-        clickedCellElm.innerHTML = "joueurEnCours"; // change la case qui viens d'être cliquée (contrairement a ce que j'ai dis
-        // peut être fait aussi avec le clic MAIS n'oubliez pas de stocker l'information dans un tableau car
-        // il faudra utiliser le tableau pour vérifier les conditions de victoire
-
-
-        if(joueur1 % 2 == 0){
-
-            console.log("joueur 1 joue");
-        }else {
-
-            console.log("joueur 2 joue");
-        }
-
-
-    });
-
-    function changeColor(id) {
-        const tabs = document.getElementsByClassName('tab');
-
-        for (let i = 0; i < tabs.length; ++i) {
-            const item = tabs[i];
-            item.style.backgroundColor = (item.id === id) ? "red" : "white";
-        }
-
-    }
-
-
-
-
-
-   // var joueur1 = 1;
-  //  function display_input(gameArea){
-   //    if ( joueur1 == 1 ){
-   //         document.getElementById("game-area").innerHTML = "X";
-    //        joueur1 = 0;
-    //    } else {
-    //        document.getElementById("game-area").innerHTML = "O";
-    //        joueur1 = 1;
-  //      }
- //   }
-
-
-
-</script>
+<script src="js/puissance4.js"></script>
 </body>
 </html>
