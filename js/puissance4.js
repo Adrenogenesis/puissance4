@@ -12,9 +12,6 @@ joueurs[0] = "joueur1";
 joueurs[1] = "joueur2";
 
 
-
-
-
 gameArea.addEventListener("click", function(event) {
     let clickedCellElm;
     let clickedCellName;
@@ -29,7 +26,7 @@ gameArea.addEventListener("click", function(event) {
     console.log("clickedCell : " + clickedCellName);
 
 
-    cellsStatus[clickedCellChordX-1][clickedCellChordY-1] = joueurs[0]; // modifie le tableau pour stocker la donnée dans la case cliquée
+    cellsStatus[clickedCellChordX-1][clickedCellChordY-1] = joueurEnCours; // modifie le tableau pour stocker la donnée dans la case cliquée
     partie();
     console.log(cellsStatus);
 
