@@ -35,16 +35,15 @@ img {
     width: 80px;
     height: 80px;
     display: inline-block;
-background-color: rgb(168, 174, 255);
+background-color: orange);
 border-radius: 50%;
 border-color: black;
 transition-duration: 0.4s;
     cursor: pointer;
-    color: transparent;
-
-  } 
+    color: blue;
+  }
 
   button:hover {
-    background-color: rgb(120, 166, 250); /* Green */
-    color: white;
+    background-color: burlywood; /* Green */
+    color: black;
 }
